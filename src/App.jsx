@@ -22,10 +22,10 @@ const App=()=> {
   <>
 <div style={{"display":"flex","flexDirection":"column","gap":"20px"}}>
  
-  <TextField id='title' size="medium" label="Write the title" fullWidth="true"  variant="outlined" />
-    <TextField variant="outlined" size="medium"  label="description" fullWidth="true" id='des' />
+  <TextField id='title' size="medium" label="Write the title"  variant="outlined" />
+    <TextField variant="outlined" size="medium"  label="description"id='des' />
 
-<Button variant="contained" onClick={()=>fetch("http://localhost:3000/todos",{method:"POST",body:JSON.stringify({
+<Button variant="contained"  onClick={()=>fetch("http://localhost:3000/todos",{method:"POST",body:JSON.stringify({
    title:document.getElementById("title").value,
    description:document.getElementById("des").value
   }),headers:{
